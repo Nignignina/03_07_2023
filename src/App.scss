@@ -1,0 +1,35 @@
+.block_1 {
+  font-size: rem(49px);
+  color: $fucxia-color;
+}
+
+.rectangular_1 {
+  @include rectangle(50px, 20px, blue);
+}
+
+.rectangular_2 {
+  @include rectangle(20px, 60px, red);
+  @include gradient($blue-color, $sky-color);
+}
+
+.rectangular_3 {
+  @include rectangle(60px, 40px, $blue-color);
+}
+
+.circle_1 {
+  @include circle(20px, 100%);
+  background: linear-gradient(to right, $blue-color, $sky-color);
+}
+
+.circle_2 {
+  @include circle(40px, 100%);
+  background-color: $fucxia-color;
+}
+.circle_3 {
+  @include circle(50px, 100%);
+  @include gradient($fucxia-color, $sky-color);
+  @include xs {
+    background-color: $sky-color;
+    @include circle(90px, 100%);
+  }
+}

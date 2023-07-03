@@ -1,0 +1,11 @@
+// variabili
+$phone: 0px;
+$tablet: 768px;
+$laptop: 1024px;
+$large: 1920px;
+
+@mixin xs {
+  @media only screen and (min-width: $phone)and (max-width : #{$tablet - 1}) {
+    @content;
+  }
+}
