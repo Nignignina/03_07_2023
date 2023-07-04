@@ -8,10 +8,10 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `@import "./src/scss/variables/geometries.scss";
-        @import "./src/scss/variables/color.scss";
-        @import "./src/scss/variables/gradient.scss";
-        @import "./src/scss/function/function.scss";
-        @import "./src/scss/variables/device.scss";
+        @import "./src/scss/colors/all-colors.scss";
+        @import "./src/scss/layouts/all-layouts.scss";
+        @import "./src/scss/typhography/all-typhography.scss";
+       
         `,
       },
     },

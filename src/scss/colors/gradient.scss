@@ -1,0 +1,16 @@
+@use "sass:math";
+// MIXIN
+@mixin gradient($start-color, $end-color) {
+  background: linear-gradient(to right, $start-color, $end-color);
+}
+
+// FUNCTION
+
+// lighten e darken starting from a color
+@function colorShade($color, $percentage) {
+  @if ($percentage>50) {
+    @return mix(black, $color, $percentage);
+  } @else {
+    @return mix(white, $color, $percentage);
+  }
+}

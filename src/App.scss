@@ -1,6 +1,16 @@
+.Play1 {
+  @include display(flex);
+  @include just-ali(center, none);
+  font-family: $_fontPrimary;
+
+  .block_1 {
+    @include display(flex);
+  }
+}
+
 .block_1 {
   font-size: rem(49px);
-  color: $fucxia-color;
+  color: $primary-color;
 }
 
 .rectangular_1 {
@@ -9,27 +19,50 @@
 
 .rectangular_2 {
   @include rectangle(20px, 60px, red);
-  @include gradient($blue-color, $sky-color);
+  @include gradient($primary-color, $secondary-color);
 }
 
 .rectangular_3 {
-  @include rectangle(60px, 40px, $blue-color);
+  @include rectangle(60px, 40px, $secondary-color);
 }
 
 .circle_1 {
   @include circle(20px, 100%);
-  background: linear-gradient(to right, $blue-color, $sky-color);
+  background: linear-gradient(to right, $terziary, $secondary-color);
 }
 
 .circle_2 {
   @include circle(40px, 100%);
-  background-color: $fucxia-color;
+  background-color: $quartary-color;
+  @include sm {
+    @include circle(90px, 100%);
+  }
 }
 .circle_3 {
   @include circle(50px, 100%);
-  @include gradient($fucxia-color, $sky-color);
+  @include gradient($terziary, $secondary-color);
   @include xs {
-    background-color: $sky-color;
+    background-color: $primary-color;
     @include circle(90px, 100%);
+  }
+}
+
+.Play2 {
+  @include display(flex);
+  @include just-ali(center, center);
+  flex-wrap: wrap;
+  @include xs {
+    @include columns(3);
+    background-color: $secondary-color;
+  }
+
+  @include sm {
+    @include columns(5);
+    background-color: $terziary;
+  }
+
+  @include tm {
+    @include columns(12);
+    background-color: $quartary-color;
   }
 }
