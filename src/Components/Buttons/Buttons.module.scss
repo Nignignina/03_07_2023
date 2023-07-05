@@ -1,0 +1,58 @@
+@mixin buttonSize($size) {
+  @if $size == "xl" {
+    padding: rem(50px) rem(50px);
+    // font-size: rem($buttonXl);
+  } @else if $size == "sm" {
+    padding: rem(50px) rem(50px);
+    // font-size: rem($buttonSm);
+  } @else {
+    padding: rem(50px) rem(50px);
+    // font-size: rem($buttonMd);
+  }
+}
+Button {
+  display: flex;
+  @include just-ali(center, center);
+  padding: 10px;
+  outline: none;
+
+  cursor: pointer;
+  gap: 5px;
+  width: 60%;
+  color: rgb(255, 255, 255);
+
+  &.icon__right {
+    flex-direction: row-reverse;
+  }
+
+  &.outline {
+    border: 2px solid $primary-color;
+    color: black;
+    background-color: none;
+  }
+
+  &.fill {
+    background-color: $interaction-color;
+    color: rgb(242, 242, 242);
+  }
+  &.text {
+    background-color: transparent;
+    color: black;
+  }
+
+  &.square {
+    width: fit-content;
+    border-radius: 100%;
+  }
+  &.xl {
+    @include buttonSize(xl);
+  }
+
+  &.md {
+    @include buttonSize(md);
+  }
+
+  &.sm {
+    @include buttonSize(sm);
+  }
+}

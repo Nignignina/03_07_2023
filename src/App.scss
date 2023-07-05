@@ -66,3 +66,41 @@
     background-color: $quartary-color;
   }
 }
+
+.Play3 {
+  @include display(flex);
+  flex-direction: column;
+  background-color: $terziary;
+
+  .column-2 {
+    @include just-ali(center, center);
+  }
+
+  &_Buttons {
+    display: flex;
+    gap: 5px;
+    @include just-ali(center, center);
+    padding: 0 20px;
+
+    @include xs {
+      flex-wrap: wrap;
+      @include just-ali(space-between, center);
+
+      @include columns(6);
+    }
+
+    @include sm {
+      flex-direction: row;
+      @include just-ali(space-between, center);
+      background-color: $primary-color;
+      @include columns(8);
+    }
+
+    @include tm {
+      flex-direction: row;
+      @include just-ali(space-between, center);
+      background-color: $secondary-color;
+      @include columns(12);
+    }
+  }
+}
