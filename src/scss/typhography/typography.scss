@@ -1,8 +1,3 @@
-$heading1: 26px;
-$heading2: 22px;
-$heading3: 18;
-$heading4: 16px;
-
 $_fontPrimary: "Poppins", sans-serif;
 
 // function for rem
@@ -14,6 +9,15 @@ $basesize: 16px;
   @return math.div($px, $basesize) * 1rem;
 }
 
-// .heading1 {
-//   @extend %heading;
-// }
+$heading1: 26px;
+$heading2: 22px;
+$heading3: 20px;
+$heading4: 18px;
+$heading5: 16px;
+$paragraph: 16px;
+$paragraphSmall: 14px;
+$paragraphExtraSmall: 12px;
+
+$buttonXl: 30px;
+$buttonMd: 20px;
+$buttonSm: 14px;

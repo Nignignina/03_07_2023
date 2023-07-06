@@ -1,24 +1,38 @@
 @mixin buttonSize($size) {
   @if $size == "xl" {
     padding: rem(50px) rem(50px);
-    // font-size: rem($buttonXl);
+    font-size: rem($buttonXl);
   } @else if $size == "sm" {
-    padding: rem(50px) rem(50px);
-    // font-size: rem($buttonSm);
+    padding: rem(30px) rem(30px);
+    font-size: rem($buttonSm);
   } @else {
-    padding: rem(50px) rem(50px);
-    // font-size: rem($buttonMd);
+    padding: rem(40px) rem(40px);
+    font-size: rem($buttonMd);
   }
 }
+
+// @mixin buttonFill($theme) {
+//   @if ($theme == "outline") {
+//     background-color: $terziary;
+//     border-color: $interaction-color;
+//     color: $interaction-color;
+//   } @else {
+//     background-color: $interaction-color;
+//     border-color: $interaction-color;
+//     color: $interaction-color;
+//   }
+// }
 Button {
   display: flex;
   @include just-ali(center, center);
-  padding: 10px;
+  border-radius: 28px;
+  min-width: fit-content;
+
   outline: none;
 
   cursor: pointer;
   gap: 5px;
-  width: 60%;
+
   color: rgb(255, 255, 255);
 
   &.icon__right {
@@ -26,9 +40,9 @@ Button {
   }
 
   &.outline {
-    border: 2px solid $primary-color;
+    border: 6px solid $secondary-color;
     color: black;
-    background-color: none;
+    background-color: $terziary;
   }
 
   &.fill {
@@ -36,8 +50,10 @@ Button {
     color: rgb(242, 242, 242);
   }
   &.text {
-    background-color: transparent;
+    background-color: $terziary;
     color: black;
+    outline: none;
+    border: none;
   }
 
   &.square {

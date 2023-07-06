@@ -3,10 +3,12 @@ import { useState } from "react";
 import "./App.css";
 import "./App.scss";
 import Buttons from "./Components/Buttons/Buttons";
+import { InputToggle } from "./Components/form";
+import { InputText } from "./Components/form";
 
 function App() {
   const [count, setCount] = useState(0);
-
+  const [inputTextValue, setInputTextValue] = useState();
   return (
     <>
       <div className="App">
@@ -26,26 +28,37 @@ function App() {
           </div>
         </div>
 
+        <InputText
+          id={"name"}
+          name="name"
+          placeholder="Your name"
+          label={"name"}
+          // error
+          // errorMessage={"Inserisci il tuo nome"}
+          handleChange={setInputTextValue}
+        />
+        <InputToggle toggled size />
+
         <div className="Play3 ">
           <h2>Block 2 </h2>
           <div className="Play3_Buttons">
             <div className="column-2">
-              <Buttons label="go to" icon fill />
+              <Buttons label="go to" icon size="sm" />
             </div>
             <div className="column-2">
-              <Buttons label="don't go" icon iconLeft />
+              <Buttons label="don't go" icon iconLeft size text />
             </div>
             <div className="column-2">
-              <Buttons label="submit" icon outline fill />
+              <Buttons label="submit" icon outline size="xl" />
             </div>
             <div className="column-2">
-              <Buttons label="discover" icon text />
+              <Buttons label="discover" icon text size />
             </div>
             <div className="column-2">
-              <Buttons label="go to" icon />
+              <Buttons label="go to" icon size />
             </div>
             <div className="column-2">
-              <Buttons label="" icon square />
+              <Buttons label="" icon square size />
             </div>
           </div>
         </div>
