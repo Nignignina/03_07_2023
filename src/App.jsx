@@ -5,6 +5,8 @@ import "./App.scss";
 import Buttons from "./Components/Buttons/Buttons";
 import { InputToggle } from "./Components/form";
 import { InputText } from "./Components/form";
+import { Checkbox } from "./Components/form";
+import Header from "./Components/header/Header";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,6 +14,8 @@ function App() {
   return (
     <>
       <div className="App">
+        <Header />
+        <Checkbox checked />
         <div className="Play1">
           play with design sistem
           <div className="block_1">

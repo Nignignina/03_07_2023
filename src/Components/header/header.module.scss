@@ -1,0 +1,51 @@
+.Header {
+  left: 0;
+  height: 100px;
+  background-color: black;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0px 20px;
+  @include display(flex);
+  @include just-ali(space-between, center);
+
+  color: $terziary;
+  & li {
+    list-style-type: none;
+  }
+  &__menu {
+    padding: 0;
+
+    width: fit-content;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+
+    &__section {
+      @include display(flex);
+
+      gap: 5px;
+      cursor: pointer;
+
+      &_dropdown {
+        opacity: 0;
+      }
+      &.open {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  // .flex {
+  //   display: flex;
+  // }
+
+  // .align-item-center {
+  //   align-items: center;
+  // }
+
+  // .justify-content.between {
+  //   justify-content: center;
+  // }
+}
